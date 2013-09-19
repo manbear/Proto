@@ -2,7 +2,7 @@
 
 angular.module('protoApp')
   .controller('CodeCtrl', function ($scope) {
-    $scope.themes = ['ambiance','solarized dark', 'solarized light'];
+    $scope.themes = ['solarized dark', 'solarized light', 'ambiance'];
     $scope.theme = $scope.themes[0];
     $scope.code = 'println(hello world)';
     $scope.options = {

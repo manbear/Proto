@@ -8,20 +8,24 @@
     <meta name="viewport" content="width=device-width">
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 
-    <!-- build:css(.tmp) styles/main.css -->
-    <link rel="stylesheet" href="styles/bootstrap.css">
-    <link rel="stylesheet" href="styles/main.css">
+    <!-- build:css(.tmp) styles/kata.css -->
+    <link rel="stylesheet" href="styles/kata.css">
+    <link rel="stylesheet" href="styles/full-kata.css">
     <!-- endbuild -->
 
-    <!-- build:css styles/plugins.css -->
+    <!-- build:css styles/dep.css -->
     <link rel="stylesheet" href="bower_components/codemirror/theme/ambiance.css">
     <link rel="stylesheet" href="bower_components/codemirror/theme/solarized.css">
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap-theme.css">
+
     <link rel="stylesheet" href="bower_components/codemirror/lib/codemirror.css">
     <!-- endbuild -->
+
 </head>
   <body ng-app="protoApp">
     <!-- Add your site or application content here -->
-    <div class="container" ng-view=""></div>
+    <div ng-view=""></div>
 
     <script src="bower_components/jquery/jquery.js"></script>
     <script src="bower_components/angular/angular.js"></script>

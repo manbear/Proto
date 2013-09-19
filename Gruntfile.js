@@ -41,6 +41,10 @@ module.exports = function (grunt) {
         files: ['<%= yeoman.app %>/styles/{,*/}*.css'],
         tasks: ['copy:styles', 'autoprefixer']
       },
+      less: {
+        files: ['<%= yeoman.app %>/styles/{,*/}*.less'],
+        tasks: ['less:dev']
+      },
       livereload: {
         options: {
           livereload: LIVERELOAD_PORT
@@ -270,15 +274,18 @@ module.exports = function (grunt) {
     concurrent: {
       server: [
         'coffee:dist',
-        'copy:styles'
+        'copy:styles',
+        'less:dev'
       ],
       test: [
         'coffee',
-        'copy:styles'
+        'copy:styles',
+        'less:dev'
       ],
       dist: [
         'coffee',
         'copy:styles',
+        'less:dist',
         'imagemin',
         'svgmin',
         'htmlmin'
@@ -312,6 +319,18 @@ module.exports = function (grunt) {
             '<%= yeoman.dist %>/scripts/scripts.js'
           ]
         }
+      }
+    },
+    less: {
+      dev: {
+        files: {
+          '.tmp/styles/main.css': [
+            '<%= yeoman.app %>/styles/main.less'
+          ] 
+        }
+      },
+      div : {
+        // ...
       }
     }
   });
