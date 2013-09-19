@@ -1,8 +1,35 @@
 @color: #4D926E;
 
-header {
-  color: @color;
+@sky: #7fdff9;
+@earth: #444;
+@light-earth: #555;
+@fire: #e5554d;
+
+body {
+	background-color: @earth;
 }
-h2 {
-  color: @color;
+
+section div:first-of-type {
+	height: 500px;
+}
+.color-test {
+	text-align: center;
+	padding: 20px;
+	color: white;
+	font-size: 32px;
+	width: 100%;
+	height: 100px;
+}
+
+.earth {
+	background-color: @earth;
+}
+.light-earth {
+	background-color: @light-earth;
+}
+.fire {
+	background-color: @fire;
+}
+.sky {
+	background-color: @sky;
 }
