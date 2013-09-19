@@ -1,0 +1,4 @@
+<section ng-controller="CodeCtrl">
+	<textarea ui-codemirror="options" ng-model="code"></textarea>
+	<select ng-model="theme" ng-options="c for c in themes" ng-change="themeChanged()"></select>
+</section>
