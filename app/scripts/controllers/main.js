@@ -7,7 +7,11 @@ angular.module('protoApp').controller('CodeCtrl', function ($scope) {
     '    val isAdult = guy.age > legalAge',
     '    isAdult || guy.startsWith("Sa")',
     '}',
-    'isElligible(Person("Sam", 2))'
+    'isElligible(Person("Sam", 2))',
+    '',
+    '',
+    '',
+    ''
   ].join('\n');
 
   $scope.insight = [
@@ -22,13 +26,11 @@ angular.module('protoApp').controller('CodeCtrl', function ($scope) {
   $scope.options = {
     lineNumbers: true,
     mode: 'text/x-scala',
-    theme: 'solarized dark',
-    lineWrapping: true
+    theme: 'solarized dark'
   };
   $scope.options2 = {
     mode: 'text/x-scala',
     theme: 'solarized dark',
-    lineWrapping: true,
     readOnly: 'nocursor'
   };
 });
