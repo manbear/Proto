@@ -34,4 +34,3 @@ angular.module('protoApp').controller('CodeCtrl', function ($scope) {
     readOnly: 'nocursor'
   };
 });
-

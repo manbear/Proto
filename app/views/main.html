@@ -1,9 +1,12 @@
 <section class="escritoire" ng-controller="CodeCtrl">
+
 	<div class="code">
 		<textarea ui-codemirror="options" ng-model="code"></textarea>
+	<!-- display: inline-block is space dependent-->
 	</div><div class="insight">
 		<textarea ui-codemirror="options2" ng-model="insight"></textarea>
 	</div><div class="doc">
-		<textarea ui-codemirror="options2" ng-model="insight"></textarea>
+		<input type="search" class="form-control">
+		<!-- <textarea ui-codemirror="options2" ng-model="insight"></textarea> -->
 	</div>
 </section>
