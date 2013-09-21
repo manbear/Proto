@@ -1,14 +1,33 @@
-html, body, .app, .escritoire, .code, .insight, .doc {	
+html, body, .escritoire {
 	height: 100%;
 }
 
-.code, .insight, .doc {
-	display: inline-block;
-	vertical-align: top;
-	width: (100% / 3);
+@header-height: 50px;
+
+.app {
+	height: calc(~"100% -"@header-height);
 }
 
-.doc [type='search'] {
-	width: 80%;
-	margin: 40px auto;
+header {
+	padding: 5px;
+	height: @header-height;
+
+	.search {
+		float: right;
+
+		[type='search'] {
+			height: 100%;
+			width: 400px;
+		}	
+	}
+}
+
+.code, .insight {	
+	display: inline-block;
+	vertical-align: top;
+}
+
+.code, .insight {
+	width: (100% / 2);
+	height: 100%;	
 }

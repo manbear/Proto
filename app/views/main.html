@@ -1,12 +1,32 @@
-<section class="escritoire" ng-controller="CodeCtrl">
+<div class="escritoire" ng-controller="CodeCtrl">
+	<header>
+        <nav>
+            <div class="search form-inline" >
+                <input datasets="exampleData" ng-model="foo" class="form-control ngTypeahead" type="search">
+                <input class="btn btn-primary" type="submit" value="Search">
+            </div>
+        </nav>
+    </header>
 
 	<div class="code">
 		<textarea ui-codemirror="options" ng-model="code"></textarea>
 	<!-- display: inline-block is space dependent-->
 	</div><div class="insight">
 		<textarea ui-codemirror="options2" ng-model="insight"></textarea>
-	</div><div class="doc">
-		<input type="search" class="form-control">
-		<!-- <textarea ui-codemirror="options2" ng-model="insight"></textarea> -->
 	</div>
-</section>
+</div>
+
+
+<!--   <ul class="nav navbar-nav navbar-right">
+      <li><a href="#">Link</a></li>
+      <li class="dropdown">
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
+        <ul class="dropdown-menu">
+          <li><a href="#">Action</a></li>
+          <li><a href="#">Another action</a></li>
+          <li><a href="#">Something else here</a></li>
+          <li><a href="#">Separated link</a></li>
+        </ul>
+      </li>
+    </ul>
+     -->

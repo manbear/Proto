@@ -1,6 +1,9 @@
 'use strict';
 
-angular.module('protoApp', ['ui.codemirror'])
+angular.module('protoApp', [
+	'ui.codemirror',
+	'siyfion.ngTypeahead'
+])
   .config(function ($routeProvider) {
     $routeProvider
       .when('/', {
