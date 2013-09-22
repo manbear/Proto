@@ -1,0 +1,175 @@
+<!DOCTYPE>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Search Snippet Prototype</title>
+        
+        <style type="text/css">
+            body {
+                background-color: #333;
+            }
+            
+            div#rightPanel {
+                height: 100%;
+                border: 1px solid black;
+                background-color: white;
+            }
+            
+            div#rightPanel span {
+                color: #333;
+                font-size: 12pt;
+            }
+            
+            div#rightPanel span#snippetTitle {
+                font-size: 18pt;
+                display: inline-block;
+                margin: 5px 1px 25px 10px; 
+            }
+            
+            span#userPosted {
+                float: right;
+                display: inline-block;
+                margin: 5px 5px 10px 1px;
+            }
+            
+            div.table div {
+                float: left;
+            }
+            
+            div#snippetNote div.img-border {
+                width: 50px;
+                height: 50px;
+                overflow: hidden;
+                float: left;
+            }
+            
+            div#snippetNote div.note span {
+                float: right;
+                display: block;
+                margin-top:15px;
+                font-weight: bold;
+            }
+            
+            div#snippetNote div.img-border.green {
+                margin-left: 5px;
+                background: url('VistaArrowIconsPreview1.jpg') 603px 555px;
+                -moz-transform:rotate(180deg);
+                -webkit-transform:rotate(180deg);
+                transform:rotate(180deg);
+            }
+            
+            div#snippetNote div.img-border.red {
+                margin-left: 5px;
+                background: url('VistaArrowIconsPreview1.jpg') 526px 555px;
+            } 
+            
+            div#rightPanel div#snippetDescription {
+                width: 88%;
+                min-height: 100px;
+                padding: 3px;
+                margin: 0px 5px 10px 5px;
+                border: 1px solid #333;
+                background-color: #fafafa;
+            }
+            
+            div#rightPanel div#tagList {
+                text-align: center;
+            }
+            
+            div#commentSection span.title {
+                font-weight: bold;
+                display: inline-block;
+                padding: 10px 0px 3px 5px;
+            }
+            
+            div.comment {
+                min-height: 50px;
+                border: 1px solid #333;
+                margin: 1px 15px 2px 15px;
+                background-color: #fafafa;
+            }
+            
+            div.comment span {
+                display: block;
+                margin-top: 15px;
+            }
+            
+            div.comment div.imgPlaceHolder {
+                margin: 2px 5px 0 3px;
+                float: left;
+            }
+            
+            div#actions {
+                text-align: center;
+                padding-top: 10px;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="rightPanel">
+            <span id="snippetTitle">This is the Snippet's Title</span>
+            <span id="userPosted">From: <a href="#">manBear</a></span>
+            <div class="table">
+                <div id="snippetNote">
+                    <div class="note">
+                        <div class="img-border green">
+                        </div>
+                        <span>300</span>
+                    </div>
+                    <br>
+                    <div class="note">
+                        <div class="img-border red">
+                        </div>
+                        <span>25</span>
+                    </div>
+                </div>
+                <div id="snippetDescription">
+                    <span>This is the description of the snippet.</span>
+                </div>
+            </div>
+            <div style="clear:both;"></div>
+            <div id="tagList">
+                <span>
+                    <a href="#">tagSearched1</a>,
+                    <a href="#">tagSearched2</a>,
+                    <a href="#">tagSearched3</a>
+                </span>
+            </div>
+            <div id="commentSection">
+                <span class="title">Comments Section:</span>
+                <div class="comment">
+                    <div class="imgPlaceHolder">
+                        <img src="http://placehold.it/45x45" />
+                    </div>
+                    <span>Comment #1 from another user</span>
+                </div>
+                <div class="comment">
+                    <div class="imgPlaceHolder">
+                        <img src="http://placehold.it/45x45" />
+                    </div>
+                    <span>Comment #2 from another user</span>
+                </div>
+                <div class="comment">
+                    <div class="imgPlaceHolder">
+                        <img src="http://placehold.it/45x45" />
+                    </div>
+                    <span>Comment #3 from another user</span>
+                </div>
+                <div class="comment">
+                    <div class="imgPlaceHolder">
+                        <img src="http://placehold.it/45x45" />
+                    </div>
+                    <span>Comment #4 from another user</span>
+                </div>
+            </div>
+            
+            <div id="actions">
+                <input type="button" value="Back" />
+            </div>
+        </div>
+    
+        <script type="text/javascript">
+        
+        </script>
+    </body>
+</html>
