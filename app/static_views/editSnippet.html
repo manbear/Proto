@@ -1,0 +1,77 @@
+<!DOCTYPE>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Edit Snippet Prototype</title>
+        <style type="text/css">
+        
+            body {
+                background-color: #333;
+            }
+            
+            h2 {
+                color: #333;
+                text-align: center;
+                padding-top: 10px;
+            }
+            
+            div#viewport label {
+                color: #333;
+                font-size: 13pt;
+            }
+            
+            div#viewport {
+                background-color: white;
+                height: 100%;
+            }
+            
+            div#viewport div.inputRow {
+                padding: 5px;
+            }
+            
+            div#viewport div.inputRow label {
+                display: inline-block;
+                width: 90px;
+                padding-right: 3px;
+                text-align: right;
+            }
+            
+            div#viewport div.inputRow textarea {
+                width: 85%;
+                height: 100px;
+            }
+            
+            input[type=text] {
+                border: 1px solid #333;
+            }
+            
+            textarea,
+            input[type=text] {
+                background-color: #fefefe;
+            }
+            
+        </style>
+    </head>
+    <body>
+        <div id="viewport">
+            <h2>Snippet's Form</h2>
+            <div class="inputRow">
+                <label for="title">Title</label>
+                <input type="text" name="title" />
+            </div>
+            <div class="inputRow">
+                <label for="description" style="vertical-align: top;">Description</label>
+                <textarea name="description"></textarea>
+            </div>
+            <div class="inputRow">
+                <label for="tags">Tags</label>
+                <input type="text" name="tags" style="width:85%" />
+            </div>
+            
+            <div style="text-align: center;">
+                <input type="button" value="Ok" />
+                <input type="button" value="Cancel" />
+            </div>
+        </div>
+    </body>
+</html>
