@@ -2,41 +2,66 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Proto</title>
-    <meta name="description" content="">
     <meta name="viewport" content="width=device-width">
-    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
-
-    <!-- build:css styles/dep.css -->
     <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
     <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap-theme.css">
     <link rel="stylesheet" href="bower_components/codemirror/lib/codemirror.css">
-    <!-- endbuild -->
-
     <link rel="stylesheet" href="styles/main.css">
 
 </head>
   <body ng-app="protoApp">
-    <div class="app" ng-view=""></div>
+
+    <div class="escritoire" ng-controller="CodeCtrl">
+        <header>
+            <nav>
+                <typeahead class="search" items="all"
+                    term="term" search="search(term)" select="select(item)">
+                    <div class="doc">
+                        <h3 ng-show="hasDocs()">Doc</h3>
+                        <ul>
+                            <li typeahead-item="doc" ng-repeat="doc in docs" class="results">
+                                <span class="class">{{doc.class}}</span>
+                                <span class="fun">{{doc.fun}}</span>
+                                <span class="signature">{{doc.signature}}</span>
+                                <textarea ui-codemirror="options3" ng-model="doc.example"></textarea>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="snippet">
+                        <h3 ng-show="hasSnippets()">Snippet</h3>
+                        <ul>
+                            <li typeahead-item="snippet" ng-repeat="snippet in snippets" class="results">
+                                <textarea ui-codemirror="options3" ng-model="snippet.code"></textarea>
+                            </li>
+                        </ul>
+                    </div>
+                </typeahead>
+            </nav>
+        </header>
+
+        <div class="app">
+            <div class="code">
+                <textarea ui-codemirror="options" ng-model="code"></textarea>
+            <!-- display: inline-block is space dependent-->
+            </div><div class="insight">
+                <textarea ui-codemirror="options2" ng-model="insight"></textarea>
+            </div>
+        </div>
+    </div>
 
     <script src="bower_components/jquery/jquery.js"></script>
-    <script src="bower_components/typeahead.js/dist/typeahead.js"></script>
     <script src="bower_components/angular/angular.js"></script>
-    <script src="bower_components/angular-typeahead/angular-typeahead.js"></script>
 
-    <!-- build:js scripts/plugins.js -->
     <script src="bower_components/codemirror/lib/codemirror.js"></script>
     <script src="bower_components/codemirror/mode/clike/clike.js"></script>
-    <!-- endbuild -->
-
-    <!-- build:js scripts/modules.js -->
     <script src="bower_components/angular-ui-codemirror/ui-codemirror.js"></script>
-    <!-- endbuild -->
-
-    <!-- build:js({.tmp,app}) scripts/scripts.js -->
+    <script src="bower_components/fuse.js/fuse.min.js"></script>
+    
     <script src="scripts/app.js"></script>
-    <script src="scripts/controllers/main.js"></script>
-    <!-- endbuild -->
+    <script src="scripts/services/scaladoc.js"></script>
+    <script src="scripts/services/snippets.js"></script>
+    <script src="scripts/directives/typeahead.js"></script>
+    <script src="scripts/controllers/codeCtrl.js"></script>
 </body>
 </html>

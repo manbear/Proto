@@ -5,14 +5,15 @@
     "angular": "~1.0.7",
     "json3": "~3.2.4",
     "jquery": "~1.9.1",
-    "typeahead.js": "~0.9.3",
-    "angular-typeahead": "~0.0.4",
-    "bootstrap": "~3.0.0",
     "es5-shim": "~2.0.8",
+    "bootstrap": "~3.0.0",
+    "fuse.js": "#42e0c851071c657fe612dfdea21320a74a5641cc",
     "angular-resource": "~1.0.7",
     "angular-cookies": "~1.0.7",
     "angular-sanitize": "~1.0.7",
-    "angular-ui-codemirror": "~0.0.5"
+    "angular-ui-codemirror": "~0.0.5",
+    "rxjs": "~2.1.18"
+
   },
   "devDependencies": {
     "angular-mocks": "~1.0.7",
