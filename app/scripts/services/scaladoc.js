@@ -2,9 +2,9 @@ app.factory('scaladoc', function() {
   return {
     query: function(term){
       return [
-        { class: "List", fun: "map", signature: "[B](f: (a) => b): List[B]", example: "List(1,2,3).map(_ + 1) == List(2,3,4)"},
-        { class: "Array", fun: "map", signature: "[B](f: (a) => b): Array[B]", example: "Array(1,2,3).map(_ + 1) == Array(2,3,4)" },
-        { class: "Seq", fun: "map", signature: "[B](f: (a) => b): Seq[B]", example: "Seq(1,2,3).map(_ + 1) == Seq(2,3,4)" }
+        { class: "List", fun: "map", signature: "[B](f: (a) => b): List[B]", code: "List(1,2,3).map(_ + 1)", insight: "List(2,3,4)"},
+        { class: "Array", fun: "map", signature: "[B](f: (a) => b): Array[B]", code: "Array(1,2,3).map(_ + 1)", insight: "Array(2,3,4)" },
+        { class: "Seq", fun: "map", signature: "[B](f: (a) => b): Seq[B]", code: "Seq(1,2,3).map(_ + 1)", insight: "Seq(2,3,4)" }
       ];
     }
   };

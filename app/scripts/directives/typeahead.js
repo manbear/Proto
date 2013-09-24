@@ -61,17 +61,17 @@ app.directive('typeahead', ["$timeout", function($timeout) {
                 scope.$apply(function() { scope.focused = true; });
             });
 
-            // $input.bind('blur', function() {
-            //     scope.$apply(function() { scope.focused = false; });
-            // });
+            $input.bind('blur', function() {
+                scope.$apply(function() { scope.focused = false; });
+            });
 
             $list.bind('mouseover', function() {
                 scope.$apply(function() { scope.mousedOver = true; });
             });
 
-            // $list.bind('mouseleave', function() {
-            //     scope.$apply(function() { scope.mousedOver = false; });
-            // });
+            $list.bind('mouseleave', function() {
+                scope.$apply(function() { scope.mousedOver = false; });
+            });
 
             $input.bind('keyup', function(e) {
                 if (e.keyCode === 9 || e.keyCode === 13) {

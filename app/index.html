@@ -24,7 +24,7 @@
                                 <span class="class">{{doc.class}}</span>
                                 <span class="fun">{{doc.fun}}</span>
                                 <span class="signature">{{doc.signature}}</span>
-                                <textarea ui-codemirror="options3" ng-model="doc.example"></textarea>
+                                <textarea ui-codemirror="options3" ng-model="doc.code"></textarea>
                             </li>
                         </ul>
                     </div>
@@ -44,8 +44,8 @@
             <div class="code">
                 <textarea ui-codemirror="options" ng-model="code"></textarea>
             <!-- display: inline-block is space dependent-->
-            </div><div class="insight">
-                <textarea ui-codemirror="options2" ng-model="insight"></textarea>
+            </div><div class="insight" ng-class="insightState">
+                <textarea ui-codemirror="options2" ng-model="insightCode"></textarea>
             </div>
         </div>
     </div>
