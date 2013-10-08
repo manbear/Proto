@@ -49,52 +49,6 @@ def isElligible(guy: Person, legalAge: Int = 18) = {
     isAdult || guy.startsWith("Sa")
 }
 isElligible(Person("Sam", 2))
-
-
-asdas
-
-asdas
-asdas
-
-
-
-
-
-asdas
-
-
-
-asdas
-
-
-
-
-
-
-asdas
-
-asdas
-
-asdas
-
-
-
-asdas
-
-asdas
-
-asdas
-
-
-asdas
-
-asdas
-asdas
-asdas
-
-
-
-asdas
 */})
 
   $scope.insightCode = hereDoc(function() {
@@ -103,53 +57,7 @@ isElligible(guy = Person("foo", 3), legalAge = 18) => false
 isAdult = false
 false
 
-true
-
-
-asdas
-
-asdas
-asdas
-
-
-
-
-
-asdas
-
-
-
-asdas
-
-
-
-
-
-
-asdas
-
-asdas
-
-asdas
-
-
-
-asdas
-
-asdas
-
-asdas
-
-
-asdas
-
-asdas
-asdas
-asdas
-
-
-
-asdas*/})
+true*/})
 
     $scope.cmLeft = null;
     $scope.cmRight = null;
