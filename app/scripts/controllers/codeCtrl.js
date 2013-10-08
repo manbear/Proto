@@ -49,6 +49,52 @@ def isElligible(guy: Person, legalAge: Int = 18) = {
     isAdult || guy.startsWith("Sa")
 }
 isElligible(Person("Sam", 2))
+
+
+asdas
+
+asdas
+asdas
+
+
+
+
+
+asdas
+
+
+
+asdas
+
+
+
+
+
+
+asdas
+
+asdas
+
+asdas
+
+
+
+asdas
+
+asdas
+
+asdas
+
+
+asdas
+
+asdas
+asdas
+asdas
+
+
+
+asdas
 */})
 
   $scope.insightCode = hereDoc(function() {
@@ -57,7 +103,56 @@ isElligible(guy = Person("foo", 3), legalAge = 18) => false
 isAdult = false
 false
 
-true*/})
+true
+
+
+asdas
+
+asdas
+asdas
+
+
+
+
+
+asdas
+
+
+
+asdas
+
+
+
+
+
+
+asdas
+
+asdas
+
+asdas
+
+
+
+asdas
+
+asdas
+
+asdas
+
+
+asdas
+
+asdas
+asdas
+asdas
+
+
+
+asdas*/})
+
+    $scope.cmLeft = null;
+    $scope.cmRight = null;
 
     $scope.options = {
       lineNumbers: true,
@@ -66,13 +161,39 @@ true*/})
       smartIndent: false,
       onChange: function(cm,event) {
         
+      },
+      onScroll: function(cm) {
+        if ($scope.cmLeft === null) {
+          $scope.cmLeft = cm;
+        }
+
+        var scrollLeftInfo = cm.getScrollInfo();
+        if ($scope.cmRight !== null) {
+          $scope.cmRight.scrollTo(scrollLeftInfo['left'], scrollLeftInfo['top']);
+        }
+      },
+      onUpdate: function(cm) {
+        $scope.cmLeft = cm;
       }
     };
     $scope.options2 = {
       lineNumbers: true,
       mode: 'text/x-scala',
       theme: 'solarized light',
-      readOnly: 'nocursor'
+      readOnly: 'nocursor',
+      onScroll: function(cm) {
+        if($scope.cmRight === null) {
+          $scope.cmRight = cm;
+        }
+
+        var scrollRightInfo = cm.getScrollInfo();
+        if ($scope.cmLeft !== null) {
+          $scope.cmLeft.scrollTo(scrollRightInfo['left'], scrollRightInfo['top']);
+        }
+      },
+      onUpdate: function(cm) {
+        $scope.cmRight = cm;
+      }
     };
 
     $scope.options3 = {
