@@ -89,6 +89,7 @@ header {
 }
 
 .code, .insight {	
+	float: left;
 	display: inline-block;
 	vertical-align: top;
 }
@@ -98,6 +99,20 @@ header {
 	height: 100%;	
 }
 
-.code .CodeMirror-vscrollbar {
+#codeEditor .expanded {
+	width: 100%;
+}
+
+.insight .CodeMirror-vscrollbar {
     overflow: hidden;
+}
+
+#insight-expand-collapse {
+	z-index: 300;
+	position: absolute;
+	left: (100% / 2) + 0.2;
+	top: (100% / 2);
+	padding: 0px 3px 0px 3px;
+	background-color: white;
+	border: 1px solid @light-earth;
 }

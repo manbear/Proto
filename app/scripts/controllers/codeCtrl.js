@@ -57,7 +57,8 @@ isElligible(guy = Person("foo", 3), legalAge = 18) => false
 isAdult = false
 false
 
-true*/})
+true
+*/})
 
     $scope.cmLeft = null;
     $scope.cmRight = null;
@@ -80,7 +81,7 @@ true*/})
           $scope.cmRight.scrollTo(scrollLeftInfo['left'], scrollLeftInfo['top']);
         }
       },
-      onUpdate: function(cm) {
+      onLoad: function(cm) {
         $scope.cmLeft = cm;
       }
     };
@@ -99,9 +100,9 @@ true*/})
           $scope.cmLeft.scrollTo(scrollRightInfo['left'], scrollRightInfo['top']);
         }
       },
-      onUpdate: function(cm) {
+      onLoad: function(cm) {
         $scope.cmRight = cm;
-      }
+      }       
     };
 
     $scope.options3 = {
@@ -109,6 +110,24 @@ true*/})
       theme: 'solarized light',
       readOnly: 'nocursor'
     };
+
   })();
   
+  (function() { /* Insight toggling */
+    $scope.insightToggler = function() {
+      var wrapCmRight = $scope.cmRight.getWrapperElement();
+      var codeEditor = document.getElementById('codeEditor');
+        
+      if (wrapCmRight.style.visibility == "") {
+        wrapCmRight.style.visibility = 'hidden'; 
+        codeEditor.setAttribute('class', 'expanded');
+
+      } else {
+        var isCurrentlyVisible = wrapCmRight.style.visibility == 'visible';
+        wrapCmRight.style.visibility = isCurrentlyVisible ? 'hidden' : 'visible';
+        codeEditor.setAttribute('class', isCurrentlyVisible ? '' : 'expanded');
+      }
+    }
+  })();
+
 });
